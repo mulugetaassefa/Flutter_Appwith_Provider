@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:collection';  // ✅ Added for UnmodifiableListView
+import 'dart:collection';  
 
 // Product Model
 class Product {
@@ -11,9 +11,9 @@ class Product {
 
 // Cart Provider (State Management)
 class CartProvider extends ChangeNotifier {
-  final List<Product> _cartItems = [];  // ✅ Made final to prevent reassignment
+  final List<Product> _cartItems = [];  
 
-  UnmodifiableListView<Product> get cartItems => UnmodifiableListView(_cartItems);  // ✅ Prevents direct modifications
+  UnmodifiableListView<Product> get cartItems => UnmodifiableListView(_cartItems);  
 
   double get totalPrice => _cartItems.fold(0, (sum, item) => sum + item.price);
 
@@ -23,7 +23,7 @@ class CartProvider extends ChangeNotifier {
   }
 
   void removeFromCart(Product product) {
-    _cartItems.removeWhere((item) => item.name == product.name);  // ✅ Removes all occurrences of a product
+    _cartItems.removeWhere((item) => item.name == product.name);  
     notifyListeners();
   }
 

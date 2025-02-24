@@ -29,11 +29,11 @@ class CartScreen extends StatelessWidget {
               },
             ),
           ),
-          SizedBox(height: 1, child: Divider()),  // ✅ Fixed Divider issue
+          SizedBox(height: 1, child: Divider()),  
           Padding(
             padding: EdgeInsets.all(16.0),
             child: Text(
-              "Total: \$${(cart.totalPrice ?? 0.0).toStringAsFixed(2)}",  // ✅ Fixed null safety issue
+              "Total: \$${(cart.totalPrice ?? 0.0).toStringAsFixed(2)}",  
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),

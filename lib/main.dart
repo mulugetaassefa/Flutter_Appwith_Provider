@@ -6,7 +6,7 @@ import 'product_screen.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (context) => CartProvider(),  // ✅ Removed semicolon
+      create: (context) => CartProvider(),  
       child: MyApp(),
     ),
   );
@@ -14,10 +14,10 @@ void main() {
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {  // ✅ Fixed typo
+  Widget build(BuildContext context) {  
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProductListScreen(),  // ✅ Fixed incorrect widget name
+      home: ProductListScreen(),  
     );
   }
 }

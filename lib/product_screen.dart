@@ -12,11 +12,11 @@ class ProductListScreen extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) {  // ✅ Fixed lowercase "widget"
+  Widget build(BuildContext context) {  
     final cart = Provider.of<CartProvider>(context);
 
     return Scaffold(
-      appBar: AppBar(  // ✅ Fixed lowercase "appBar"
+      appBar: AppBar(  
         title: Text("Product List"),
         actions: [
           IconButton(
@@ -25,15 +25,15 @@ class ProductListScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => CartScreen()),
-              );  // ✅ Added missing semicolon
+              );  
             },
           ),
         ],
       ),
       body: ListView.builder(
-        itemCount: products.length,  // ✅ Changed "itemsCount" to "itemCount"
+        itemCount: products.length,  
         itemBuilder: (context, index) {
-          final product = products[index];  // ✅ Fixed incorrect product assignment
+          final product = products[index];  
 
           return ListTile(
             title: Text(product.name),
@@ -41,8 +41,8 @@ class ProductListScreen extends StatelessWidget {
             trailing: ElevatedButton(
               onPressed: () {
                 cart.addToCart(product);
-                ScaffoldMessenger.of(context).showSnackBar(  // ✅ Fixed spelling
-                  SnackBar(  // ✅ Fixed incorrect class name
+                ScaffoldMessenger.of(context).showSnackBar(  
+                  SnackBar(  
                     content: Text("${product.name} added to cart"),
                   ),
                 );

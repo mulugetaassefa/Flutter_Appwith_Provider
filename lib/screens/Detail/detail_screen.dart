@@ -18,8 +18,8 @@ class _DetailScreenState extends State<DetailScreen> {
         child: Column(
           children: [
             // for back button, share, and favorite
-            const DetailsAppBar(), // ✅ Fixed missing comma
-            const SizedBox(height: 20), // ✅ Fixed const position
+            const DetailsAppBar(),
+            const SizedBox(height: 20), 
             Expanded(
               child: Container(
                 width: double.infinity,
@@ -38,7 +38,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     bottom: 200,
                   ),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start, // ✅ Fixed syntax
+                    crossAxisAlignment: CrossAxisAlignment.start, 
                     children: const [
                       Text(
                         "Product Details",
